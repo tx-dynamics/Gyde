@@ -16,14 +16,24 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SubjectInfo from './Screens/SubjectInfo';
 import ClassDetails from './Screens/ClassDetails';
 import SubjectInfo2 from './Screens/SubjectInfo2';
+import Requests from './Screens/Requests';
+import Classes from './Screens/Classes';
+import ChatScreen from './Screens/ChatScreen';
+import ClassesDetails from './Screens/ClassesDetails';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer style={styles.MainScreenStyle}>
       <Stack.Navigator
-        initialRouteName="SubjectInfo2"
+        initialRouteName="ClassesDetails"
         screenOptions={{headerShown: false}}>
+
+        <Stack.Screen name="ClassesDetails" component={ClassesDetails} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} />
+        <Stack.Screen name="Classes" component={Classes} />
+        <Stack.Screen name="Requests" component={Requests} />
+
         <Stack.Screen name="logIn" component={LogIn} />
         <Stack.Screen name="AccountSetup" component={AccountSetup} />
         <Stack.Screen name="PersonalInfo" component={PersonalInfo} />
