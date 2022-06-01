@@ -7,6 +7,7 @@ import { iconPath } from '../Constants/icon';
 import PendingCard from './ClassesCard/PendingCard'
 import PastCard from './ClassesCard/PastCard'
 import CancelledCard from './ClassesCard/CancelledCard'
+import Requests from './ClassesCard/Requests'
 
 export default function ClassesDetails(props) {
 
@@ -60,6 +61,8 @@ export default function ClassesDetails(props) {
                 <PastCard />}
                 {SelectedType == "3" &&
                 <CancelledCard />}
+                {SelectedType == "4" &&
+                <Requests />}
 
             </ScrollView>
 

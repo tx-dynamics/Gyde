@@ -20,15 +20,17 @@ import Requests from './Screens/Requests';
 import Classes from './Screens/Classes';
 import ChatScreen from './Screens/ChatScreen';
 import ClassesDetails from './Screens/ClassesDetails';
+import RatingReview from './Screens/RatingReview';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer style={styles.MainScreenStyle}>
       <Stack.Navigator
-        initialRouteName="ClassesDetails"
+        initialRouteName="RatingReview"
         screenOptions={{headerShown: false}}>
 
+        <Stack.Screen name="RatingReview" component={RatingReview} />
         <Stack.Screen name="ClassesDetails" component={ClassesDetails} />
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
         <Stack.Screen name="Classes" component={Classes} />
